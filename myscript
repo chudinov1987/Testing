@@ -1,0 +1,2 @@
+#!/bin/bash
+wget -P /home/ubuntu https://raw.githubusercontent.com/chudinov1987/Testing/main/script.sh 

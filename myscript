@@ -1,2 +1,3 @@
 #!/bin/bash
 wget -P /home/ubuntu https://raw.githubusercontent.com/chudinov1987/Testing/main/script.sh 
+chmod +x /home/ubuntu/script.sh

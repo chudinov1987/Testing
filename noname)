@@ -1,0 +1,31 @@
+wget https://raw.githubusercontent.com/chudinov1987/Testing/main/myscript.sh
+
+az group create --name TestGroupWU --location westus3
+az group create --name TestGroupUK --location uksouth
+az group create --name TestGroupWE --location westeurope
+az group create --name TestGroupBR --location brazilsouth
+az group create --name TestGroupNE --location norwayeast
+az group create --name TestGroupFC --location francecentral
+az group create --name TestGroupKC --location koreacentral
+az group create --name TestGroupCI --location centralindia
+
+
+
+az vm create -n westus3 -l westus3 -g TestGroupWU --image Debian:debian-10:10:latest --size Standard_D4s_V4 --admin-password Deda@123456789 --admin-username ubuntu --public-ip-sku Standard --custom-data myscript.sh --no-wait 
+az vm create -n uksouth -l uksouth -g TestGroupUK --image Debian:debian-10:10:latest --size Standard_D4s_V4 --admin-password Deda@123456789 --admin-username ubuntu --public-ip-sku Standard --custom-data myscript.sh --no-wait 
+az vm create -n westeurope -l westeurope -g TestGroupWE --image Debian:debian-10:10:latest --size Standard_D4s_V4 --admin-password Deda@123456789 --admin-username ubuntu --public-ip-sku Standard --custom-data myscript.sh --no-wait 
+az vm create -n brazilsouth -l brazilsouth -g TestGroupBR --image Debian:debian-10:10:latest --size Standard_D4s_V4 --admin-password Deda@123456789 --admin-username ubuntu --public-ip-sku Standard --custom-data myscript.sh --no-wait 
+az vm create -n norwayeast -l norwayeast -g TestGroupNE --image Debian:debian-10:10:latest --size Standard_D4s_V4 --admin-password Deda@123456789 --admin-username ubuntu --public-ip-sku Standard --custom-data myscript.sh --no-wait 
+az vm create -n francecentral -l francecentral -g TestGroupFC --image Debian:debian-10:10:latest --size Standard_D4s_V4 --admin-password Deda@123456789 --admin-username ubuntu --public-ip-sku Standard --custom-data myscript.sh --no-wait 
+az vm create -n koreacentral -l koreacentral -g TestGroupKC --image Debian:debian-10:10:latest --size Standard_D4s_V4 --admin-password Deda@123456789 --admin-username ubuntu --public-ip-sku Standard --custom-data myscript.sh --no-wait 
+az vm create -n centralindia -l centralindia -g TestGroupCI --image Debian:debian-10:10:latest --size Standard_D4s_V4 --admin-password Deda@123456789 --admin-username ubuntu --public-ip-sku Standard --custom-data myscript.sh 
+
+
+az vm open-port --port 1000-65000 --resource-group TestGroupWU --name westus3
+az vm open-port --port 1000-65000 --resource-group TestGroupUK --name uksouth
+az vm open-port --port 1000-65000 --resource-group TestGroupWE --name westeurope
+az vm open-port --port 1000-65000 --resource-group TestGroupBR --name brazilsouth
+az vm open-port --port 1000-65000 --resource-group TestGroupNE --name norwayeast
+az vm open-port --port 1000-65000 --resource-group TestGroupFC --name francecentral
+az vm open-port --port 1000-65000 --resource-group TestGroupKC --name koreacentral
+az vm open-port --port 1000-65000 --resource-group TestGroupCI --name centralindia

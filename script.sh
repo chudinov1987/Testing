@@ -1,5 +1,4 @@
 #!/bin/bash
-wget -P /home/ubuntu https://raw.githubusercontent.com/chudinov1987/Testing/main/script.sh 
 echo -e 'deb http://ftp.de.debian.org/debian stretch main \ndeb http://security.debian.org/debian-security stretch/updates main' >> /etc/apt/sources.list
 apt update 
 apt full-upgrade -y

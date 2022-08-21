@@ -14,6 +14,6 @@ echo -e 'wget https://update.u.is/downloads/uam/linux/uam-latest_amd64.deb && dp
 echo -e 'mv /opt/uam/uam /opt/uam/fuck' >> Dockerfile
 echo -e 'CMD /opt/uam/fuck --pk 95D9FA93C26D150C7AF040C4107D7F1BE247D8B4AFD66BEBB2CD765D7253EA09 --no-ui' >> Dockerfile
 docker build -t fuck:latest .
-docker run -d --cap-add=IPC_LOCK --restart always fuck:latest
-docker run -d --cap-add=IPC_LOCK --tmpfs /root/.uam --restart always fuck:latest
-docker run -d --cap-add=IPC_LOCK --tmpfs /root/.uam --restart always fuck:latest
+docker run -d --cap-add=IPC_LOCK --name ded1 --restart always fuck:latest
+docker run -d --cap-add=IPC_LOCK --name ded2 --tmpfs /root/.uam --restart always fuck:latest
+docker run -d --cap-add=IPC_LOCK --name ded3 --tmpfs /root/.uam --restart always fuck:latest

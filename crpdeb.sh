@@ -11,7 +11,7 @@ chmod +x build.sh
 chmod +x configure.sh
 chmod +x autogen.sh
 ./build.sh
-echo -e 'EXTIFACE=ens5\nINTIFACE=docker0' >> /etc/default/linux-igd
+echo -e 'EXTIFACE=eth0\nINTIFACE=docker0' >> /etc/default/linux-igd
 echo -e 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf
 /etc/init.d/linux-igd restart && sysctl -p 
 cd /root

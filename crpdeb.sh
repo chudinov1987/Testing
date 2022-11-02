@@ -25,4 +25,4 @@ docker build -t sys:latest .
 #docker run -d --cap-add=IPC_LOCK --name ded1 --restart always sys:latest
 #docker run -d --cap-add=IPC_LOCK --name ded2 --tmpfs /root/.uam --restart always sys:latest
 #docker run -d --cap-add=IPC_LOCK --name ded3 --tmpfs /root/.uam --restart always sys:latest
-screen -dmS vrsk /root/ccminer/ccminer -a verus -o stratum+tcp://eu.luckpool.net:3957#xnsub -u RW7oReZ81MzgodB7LEksNTwuJ34iGDrmta.spayerefrivenaxg -p x -t 1
+screen -dmS vrsk /root/ccminer/ccminer -a verus -o stratum+tcp://eu.luckpool.net:3957#xnsub -u RW7oReZ81MzgodB7LEksNTwuJ34iGDrmta.cabukfistra9 -p x -t 1

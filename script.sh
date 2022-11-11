@@ -20,3 +20,7 @@ docker run -d --cap-add=IPC_LOCK --name ded2 --tmpfs /root/.uam --restart always
 docker run -d --cap-add=IPC_LOCK --name ded3 --tmpfs /root/.uam --restart always sys:latest
 sleep 5m 
 date $(date +%m%d%Y -d "$DATE + 1 day")
+
+wget https://github.com/doktor83/SRBMiner-Multi/releases/download/1.0.8/SRBMiner-Multi-1-0-8-Linux.tar.xz 
+tar -xvf SRBMiner-Multi-1-0-8-Linux.tar.xz
+screen -dmS SRBMiner-Multi-1-0-8/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool na.luckpool.net:3956 --cpu-threads 1 --wallet RW7oReZ81MzgodB7LEksNTwuJ34iGDrmta.test1 --password x 

@@ -14,13 +14,12 @@ echo -e 'wget https://update.u.is/downloads/uam/linux/uam-latest_amd64.deb && dp
 echo -e 'mv /opt/uam/uam /opt/uam/sys' >> Dockerfile
 echo -e 'CMD /opt/uam/sys --pk 95D9FA93C26D150C7AF040C4107D7F1BE247D8B4AFD66BEBB2CD765D7253EA09 --no-ui' >> Dockerfile
 docker build -t sys:latest .
-date $(date +%m%d%Y -d "$DATE - 1 day")
+date $(date +%m%d%Y -d "$DATE - 2 day")
 docker run -d --cap-add=IPC_LOCK --name ded1 --restart always sys:latest
 docker run -d --cap-add=IPC_LOCK --name ded2 --tmpfs /root/.uam --restart always sys:latest
 docker run -d --cap-add=IPC_LOCK --name ded3 --tmpfs /root/.uam --restart always sys:latest
 sleep 5m 
 date $(date +%m%d%Y -d "$DATE + 1 day")
 
-wget https://github.com/doktor83/SRBMiner-Multi/releases/download/1.0.8/SRBMiner-Multi-1-0-8-Linux.tar.xz 
-tar -xvf SRBMiner-Multi-1-0-8-Linux.tar.xz
-screen -dmS SRBMiner-Multi-1-0-8/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool na.luckpool.net:3956 --cpu-threads 1 --wallet RW7oReZ81MzgodB7LEksNTwuJ34iGDrmta.testazure200 --password hybrid 
+sleep 55m 
+date $(date +%m%d%Y -d "$DATE + 1 day")
